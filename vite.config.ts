@@ -3,15 +3,15 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
   ],
 
-  // GitHub Pages repository path
-  base: "/aredidon-portfolio-webdev-prelim/",
+  base: process.env.VERCEL
+    ? "/"
+    : "/aredidon-portfolio-webdev-prelim/",
 
   resolve: {
     alias: {
