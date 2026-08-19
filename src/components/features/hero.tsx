@@ -179,7 +179,7 @@ export function Hero() {
             <div className="h-full w-full overflow-hidden rounded-full bg-[#0B0F19]">
 
               <img
-                src="/profile.png"
+                src={`${import.meta.env.BASE_URL}profile.png`}
                 alt="Kirsty Aredidon"
                 className="h-full w-full object-cover object-top"
               />

@@ -23,7 +23,7 @@ export function Header() {
           aria-label="Kirsty - Home"
         >
           <img
-            src="/k-logo.png"
+            src={`${import.meta.env.BASE_URL}k-logo.png`}
             alt="Kirsty"
             className="h-11 w-11 object-contain transition-transform duration-300 group-hover:scale-110"
           />
