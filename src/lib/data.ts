@@ -6,6 +6,8 @@ export const skills = [
   "C#",
   "Laravel",
   "Git & GitHub",
+  "HTML",
+  "CSS",
 ];
 
 export const education = [
