@@ -197,7 +197,7 @@ export function Hero() {
             </p>
 
             <p className="mt-1 text-sm font-medium text-[#E7EBF5]">
-              React • Laravel
+              React • Tailwind • TypeScript
             </p>
 
           </div>
