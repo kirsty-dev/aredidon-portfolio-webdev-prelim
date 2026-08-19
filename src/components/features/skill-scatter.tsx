@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router";
 import { skills } from "@/lib/data";
 
 export function SkillScatter() {
@@ -55,20 +56,18 @@ export function SkillScatter() {
             }`}
             style={{ "--index": index } as React.CSSProperties}
           >
-            <div className="skill-scatter-card">{skill}</div>
+            <div className="skill-scatter-card">
+              {skill}
+            </div>
           </div>
         ))}
       </div>
 
-      {/* More About Me */}
       <div className="relative z-20 mt-8 flex justify-center">
-        <a
-          href="/aredidon-portfolio-webdev-prelim/about"
-          className="skill-about-button"
-        >
+        <Link to="/about" className="skill-about-button">
           <span>More About Me</span>
           <span className="skill-about-arrow">→</span>
-        </a>
+        </Link>
       </div>
     </section>
   );
