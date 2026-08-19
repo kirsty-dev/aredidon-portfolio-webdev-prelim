@@ -21,7 +21,7 @@ export const education = [
   {
     title: "Senior High School – STEM Strand",
     school: "Cordova Catholic Cooperative School",
-    status: "Graduated",
+    status: "Graduated • SY 2021–2024",
     description:
       "Completed the Science, Technology, Engineering, and Mathematics (STEM) strand, developing a foundation in science, mathematics, technology, and problem-solving.",
   },
