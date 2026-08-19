@@ -23,7 +23,13 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  background: #0b0f19;
+
+  background:
+    linear-gradient(rgba(76, 111, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(76, 111, 255, 0.025) 1px, transparent 1px),
+    #0b0f19;
+
+  background-size: 50px 50px;
 }
 
 button,
@@ -334,16 +340,15 @@ button {
   50% { transform: translate(50px, -60px) scale(1.1); }
 }
 
-.about-grid-bg,
+.about-grid-bg {
+  display: none;
+}
+
 .focus-grid {
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: -3;
-  background-image:
-    linear-gradient(rgba(76,111,255,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(76,111,255,.025) 1px, transparent 1px);
-  background-size: 50px 50px;
 }
 
 /* =========================================================
