@@ -171,10 +171,10 @@ export function Hero() {
           <div className="absolute h-56 w-56 rounded-full border border-[#38BDF8]/10 sm:h-72 sm:w-72" />
 
           {/* Glow */}
-          <div className="absolute h-48 w-48 rounded-full bg-[#4C6FFF]/20 blur-3xl sm:h-64 sm:w-64" />
+          <div className="absolute h-48 w-58 rounded-full bg-[#4C6FFF]/20 blur-3xl sm:h-64 sm:w-64" />
 
           {/* Avatar */}
-          <div className="avatar-ring relative flex h-65 w-65 items-center justify-center rounded-full p-1 sm:h-76 sm:w-76">
+          <div className="avatar-ring relative flex h-205 w-205 items-center justify-center rounded-full p-1 sm:h-76 sm:w-76">
 
             <div className="h-full w-full overflow-hidden rounded-full bg-[#0B0F19]">
 
