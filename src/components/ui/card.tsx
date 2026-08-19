@@ -1,21 +1,20 @@
-type CardProps = {
-  title: string;
-  description: string;
-  icon?: React.ReactNode;
-};
+import type { HTMLAttributes } from "react";
+import { cn } from "@/lib/cn";
 
-function Card({ title, description, icon }: CardProps) {
+export function Card({
+  className,
+  ...props
+}: HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-      {icon && (
-        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-50 text-2xl text-indigo-600">
-          {icon}
-        </div>
+    <div
+      className={cn(
+        "rounded-2xl border border-[#232C42] bg-[#111827]/80 p-6",
+        "transition-all duration-300",
+        "hover:-translate-y-1 hover:border-[#4C6FFF]/50",
+        "hover:shadow-xl hover:shadow-[#4C6FFF]/10",
+        className,
       )}
-      <h2 className="mb-2 text-xl font-bold text-slate-900">{title}</h2>
-      <p className="text-slate-600">{description}</p>
-    </div>
+      {...props}
+    />
   );
 }
-
-export default Card;

@@ -1,6 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@600;700&display=swap");
+
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
+
+:root {
+  font-family: "Inter", sans-serif;
+  color: #e7ebf5;
+  background: #0b0f19;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: 'Inter', sans-serif;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #0b0f19;
+}
+
+button,
+a,
+input,
+textarea {
+  font: inherit;
+}
+
+.font-sans {
+  font-family: "Sora", sans-serif;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* =========================================================
+   ANIMATED HERO BACKGROUND
+   ========================================================= */
+
+.hero-glow {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 9999px;
+  filter: blur(70px);
+}
+
+.hero-glow-one {
+  width: 24rem;
+  height: 24rem;
+  right: -8rem;
+  top: -6rem;
+  opacity: 0.25;
+  background: radial-gradient(
+    circle,
+    #4c6fff,
+    transparent 70%
+  );
+  animation: drift-one 12s ease-in-out infinite;
+}
+
+.hero-glow-two {
+  width: 20rem;
+  height: 20rem;
+  left: -6rem;
+  bottom: -8rem;
+  opacity: 0.2;
+  background: radial-gradient(
+    circle,
+    #38bdf8,
+    transparent 70%
+  );
+  animation: drift-two 16s ease-in-out infinite;
+}
+
+@keyframes drift-one {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -40px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+@keyframes drift-two {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(-30px, 30px) scale(1.08);
+  }
+
+  66% {
+    transform: translate(20px, -20px) scale(0.95);
+  }
+}
+
+/* =========================================================
+   TYPEWRITER CURSOR
+   ========================================================= */
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: middle;
+  background: #4c6fff;
+  animation: blink 0.9s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+   PROFILE AVATAR RING
+   ========================================================= */
+
+.avatar-ring {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    #4c6fff,
+    #38bdf8
+  );
+}
+
+.avatar-ring::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  z-index: -1;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #4c6fff,
+    #38bdf8,
+    #4c6fff
+  );
+  filter: blur(6px);
+  opacity: 0.6;
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   FLOATING PARTICLES
+   ========================================================= */
+
+.particle {
+  position: absolute;
+  bottom: -10px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #38bdf8;
+  opacity: 0;
+  animation-name: rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+   FLOATING STATUS BADGE
+   ========================================================= */
+
+.float {
+  animation: floaty 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* =========================================================
+   BADGE HOVER EFFECT
+   ========================================================= */
+
+.float:hover {
+  border-color: #4c6fff;
+  box-shadow: 0 0 20px rgba(76, 111, 255, 0.15);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================================================
+   SCROLL INDICATOR
+   ========================================================= */
+
+.scroll-cue {
+  animation: bounce-y 1.8s ease-in-out infinite;
+}
+
+@keyframes bounce-y {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }
