@@ -9,6 +9,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+
+  // GitHub Pages repository path
+  base: "/aredidon-portfolio-webdev-prelim/",
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
